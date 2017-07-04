@@ -1,12 +1,12 @@
 package com.huanyu.web;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
-@RestController
+@Controller
 public class IndexController {
-    @RequestMapping("/")
-    String home() {
-        return "Hello World!";
+	@GetMapping("/")
+    public String home() {
+        return "index";
     }
 }
